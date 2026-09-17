@@ -1,207 +1,3 @@
-Blok 2 — Volba nástrojů a návrh datového řešení
-Hlavní cíl
-
-Na základě business požadavků navrhnout přiměřené analytické řešení a zdůvodnit každé technologické rozhodnutí.
-
-Tento blok nebude zaměřený na další programování. Bude ověřovat schopnost rozhodnout:
-
-Co použít?
-Kde to použít?
-Proč to použít?
-Kdo to bude spravovat?
-Co naopak vůbec nepotřebujeme?
-B1 — Business potřeba
-
-Určit:
-
-jaký problém firma řeší;
-jaké rozhodnutí má výstup podporovat;
-kdo bude výstup používat;
-jaké KPI jsou potřebné;
-jak často se mají výsledky aktualizovat;
-jaká přesnost a aktuálnost je požadována.
-
-
-B2 — Posouzení datových zdrojů
-
-Prověřit:
-kde data vznikají;
-kdo je vlastní;
-jaké mají formáty;
-zda jsou strukturovaná;
-jaký mají objem;
-jak rychle přibývají;
-jakou historii potřebujeme;
-zda jsou lokální nebo cloudová;
-zda obsahují citlivé údaje;
-jak spolehlivě jsou dostupná.
-
-
-B3 — Volba ingestion
-
-Rozhodnout mezi:
-SQL dotazem;
-Pythonem;
-Power Query;
-API integrací;
-souborovým importem;
-datovou pipeline;
-inkrementálním načítáním.
-
-B4 — Volba úložiště
-
-Rozhodnout mezi:
-původním zdrojem;
-CSV, Excel nebo Parquet;
-SQL databází;
-data warehouse;
-data lake;
-lakehouse;
-analytickým modelem.
-
-B5 — Volba transformačního nástroje
-
-Posoudit, co patří do:
-SQL;
-Pythonu;
-Power Query;
-PySparku;
-analytické databáze;
-Power BI modelu;
-DAX.
-Hlavní zásada
-Transformaci provést tam,
-kde bude efektivní,
-kontrolovatelná
-a opakovatelná.
-
-B6 — Návrh datových vrstev
-
-Navrhnout:
-raw nebo Bronze;
-staging;
-Silver;
-Gold;
-faktové tabulky;
-dimenzní tabulky;
-analytické agregace;
-sémantický model;
-KPI;
-reporting.
-
-B7 — Data Quality
-
-Určit:
-validační pravidla;
-povinné hodnoty;
-duplicity;
-klíče a vazby;
-rozsahy hodnot;
-reconciliation;
-varování;
-kritické chyby;
-podmínky publikace.
-
-B8 — Automatizace a monitoring
-
-Navrhnout:
-trigger;
-scheduler;
-pořadí úloh;
-závislosti;
-paralelní kroky;
-retry;
-error handling;
-logování;
-secrets;
-monitoring;
-podmínky obnovení Power BI.
-
-B9 — Governance a odpovědnosti
-
-Určit:
-data ownera;
-vlastníka zdrojového systému;
-správce pipeline;
-odpovědnost za kvalitu;
-správce sémantického modelu;
-správce reportu;
-přístupová oprávnění;
-odpovědnost za řešení chyby.
-
-B10 — Přiměřenost architektury
-
-Ověřit:
-zda není použito příliš mnoho nástrojů;
-zda lze filtrovat a agregovat ve zdroji;
-zda je potřeba cloud;
-zda je potřeba Spark;
-zda je potřeba lakehouse;
-zda řešení zvládne dostupný tým;
-zda provozní složitost odpovídá business hodnotě;
-zda lze řešení jednodušeji udržovat.
-
-B11 — Zamítnuté alternativy
-
-Zdokumentovat:
-které varianty byly posouzeny;
-proč byla zvolena výsledná varianta;
-proč nebyl použit jednodušší nástroj;
-proč nebyla použita pokročilejší technologie;
-za jakých okolností by se doporučení změnilo.
-
-B12 — Závěrečná case study
-Energy Consumption Architecture
-Zdroje
-SQL databáze s odečty;
-API s cenami energií;
-API s počasím;
-Excel s rozpočty;
-historické CSV a Parquet soubory;
-Power BI.
-Business výstupy
-spotřeba energie;
-celkové náklady;
-náklady podle budovy;
-odchylka od rozpočtu;
-spotřeba podle počasí;
-vývoj v čase;
-neobvyklé zvýšení spotřeby;
-plnění úsporných cílů.
-
-Úkol
-
-Navrhnout:
-architekturu;
-datový tok;
-úložiště;
-transformační nástroje;
-datové vrstvy;
-datovou kvalitu;
-analytické tabulky;
-sémantický model;
-automatizaci;
-monitoring;
-odpovědnosti;
-budoucí škálování;
-zamítnuté technologie.
-
-Výstupy bloku
-tools-case-studies/
-└── 07_energy-data-solution-design.md
-
-tools-mini-tests/
-└── minitesty-volba-nastroju.md
-
-Nový cheatsheet nebude potřeba. Teorii již pokryjí:
-
-modern-data-stack-cheatsheet.md;
-automation-cheatsheet.md.
-Časový odhad bloku
-
-Přibližně 3–5 hodin.
-
-
 Blok 3 — Analytical Workflow Portfolio
 Hlavní cíl
 
@@ -222,7 +18,7 @@ Business Understanding
 → Delivery
 → Documentation
 
-C1 — Business Understanding
+1 — Business Understanding
 Témata
 business kontext;
 cílový uživatel;
@@ -236,7 +32,7 @@ kritéria úspěchu.
 Výstup
 business-requirements.md
 
-C2 — Data Source Assessment
+2 — Data Source Assessment
 Témata
 dostupné zdroje;
 význam jednotlivých tabulek;
@@ -252,7 +48,7 @@ Výstup
 data-sources.md
 data-dictionary.md
 
-C3 — Architecture Decision
+3 — Architecture Decision
 Témata
 výběr nástrojů;
 role SQL;
@@ -267,7 +63,7 @@ zdůvodnění přiměřenosti řešení.
 Výstup
 architecture.md
 
-C4 — Data Acquisition a Raw Layer
+4 — Data Acquisition a Raw Layer
 Témata
 SQL extraction;
 API;
@@ -280,7 +76,7 @@ dokumentace původu dat.
 Výstup
 data/raw/
 
-C5 — Data Quality, Cleaning a Validation
+5 — Data Quality, Cleaning a Validation
 Témata
 missing values;
 duplicity;
@@ -296,7 +92,7 @@ validace před publikací.
 Výstup
 data-quality-report.md
 
-C6 — Transformation a Business Logic
+6 — Transformation a Business Logic
 Témata
 filtrování;
 joiny;
@@ -308,7 +104,7 @@ příprava faktů a dimenzí;
 Gold tabulky;
 dokumentace transformačních pravidel.
 
-C7 — Exploratory Data Analysis
+7 — Exploratory Data Analysis
 Témata
 distribuce;
 trendy;
@@ -320,7 +116,7 @@ segmentace;
 formulace a ověřování hypotéz;
 hledání relevantních business zjištění.
 
-C8 — Statistická analýza
+8 — Statistická analýza
 
 Použije se pouze tehdy, když odpovídá business otázce.
 
@@ -336,7 +132,7 @@ omezení a riziko nesprávného závěru.
 
 Statistiku nebudeme přidávat pouze proto, aby projekt vypadal složitěji.
 
-C9 — Datový a sémantický model
+9 — Datový a sémantický model
 Témata
 granularita faktové tabulky;
 faktové a dimenzní tabulky;
@@ -350,7 +146,7 @@ hierarchie;
 formátování;
 skrytí technických sloupců.
 
-C10 — KPI a DAX
+10 — KPI a DAX
 Témata
 základní míry;
 poměrové ukazatele;
@@ -360,7 +156,7 @@ dynamické filtrování;
 správný kontext výpočtu;
 popis business významu každé míry.
 
-C11 — Dashboard
+11 — Dashboard
 Témata
 cílová skupina;
 informační hierarchie;
@@ -375,7 +171,7 @@ navigace;
 omezení počtu vizuálů;
 podpora rozhodování.
 
-C12 — Interpretace a doporučení
+12 — Interpretace a doporučení
 Témata
 hlavní zjištění;
 business význam;
@@ -392,7 +188,7 @@ Výsledek
 Výsledek
 = číslo + kontext + význam + doporučení
 
-C13 — Automation a Monitoring
+13 — Automation a Monitoring
 Témata
 převod procesu do .py;
 scheduler;
@@ -408,7 +204,7 @@ zachování posledního správného výstupu.
 
 Automatizace se použije pouze u projektu, kde dává smysl opakované zpracování.
 
-C14 — Delivery a distribuce
+14 — Delivery a distribuce
 Témata
 Power BI;
 Excel export;
@@ -421,7 +217,7 @@ oprávnění;
 verze výstupu;
 archivace.
 
-C15 — Dokumentace a GitHub
+15 — Dokumentace a GitHub
 Povinné části README
 business problém;
 cílový uživatel;
@@ -449,7 +245,7 @@ datový slovník;
 screenshoty dashboardu;
 ukázkové výstupy.
 
-C16 — Finální kontrola projektu
+16 — Finální kontrola projektu
 
 Projekt zkontrolujeme z pohledu:
 
@@ -515,30 +311,6 @@ Konečný harmonogram
 Modern Data Stack
 → dokončení současného bloku
 
-
-
-2. Volba a kombinace nástrojů
-
-Také zůstane v da-tools-portfolio.
-
-Půjde především o závěrečnou architektonickou case study:
-
-business požadavky;
-vlastnosti dat;
-volba ingestion;
-volba úložiště;
-rozdělení transformací mezi SQL, Python a Power Query;
-návrh datových vrstev;
-Data Quality;
-automatizace a monitoring;
-Power BI;
-odpovědnosti;
-škálovatelnost;
-náklady a složitost;
-zamítnuté alternativy;
-vysvětlení, proč některé technologie nepotřebujeme.
-
-Nebudeme zde celé řešení implementovat.
 
 3. Analytical Workflow
 
